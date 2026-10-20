@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tol Stack - tolerance stack-up arithmetic</title>
+<style>
+  :root { --accent:#0e7490; --ink:#08323d; --paper:#f2fafc; --soft:#d8eef3; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2.5rem 1.2rem; }
+  h1 { font-size:2.2rem; color:var(--accent); }
+  p.lede { font-size:1.12rem; margin:.9rem 0 1.6rem; }
+  .boundary { margin-bottom:1.6rem; }
+  section { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1.1rem 1.2rem; margin-bottom:1.2rem; }
+  h2 { font-size:1.18rem; margin-bottom:.5rem; }
+  section p { font-size:.98rem; }
+  a.btn { display:inline-block; margin-top:1.4rem; background:var(--accent); color:#fff; text-decoration:none; padding:.8rem 1.6rem; border-radius:999px; font-size:1.05rem; }
+  footer { margin-top:2.2rem; font-size:.85rem; color:#5c8a95; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tol Stack</h1>
+  <p class="lede">Parts of 10, 25.5 and 8 mm stack to a nominal 43.5 mm. With tolerances of 0.1, 0.2 and 0.3 mm the worst case runs from 42.9 to 44.1 mm, plus or minus 0.6 mm.</p>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    Tol Stack adds up the sizes and tolerances you type for three parts in a row and a pocket. The sizes and tolerances are yours to take from your own drawing. It treats every tolerance as plus or minus and every part as lying in one line, so it has not seen your parts and does not know their shape, tilt, wear, temperature or how they are made, and it gives no verdict that a fit will work or that a tolerance is good enough. Every number is your own entry.
+  </div>
+  <p class="lede" style="font-size:1rem">Starting examples: three parts end to end, the same tolerances as a root sum square, and the worst case gap in a 44 mm pocket.</p>
+  <section>
+    <h2>The stack truth</h2>
+    <p>Parts of 10, 25.5 and 8 mm stack to a nominal 43.5 mm. With tolerances of 0.1, 0.2 and 0.3 mm the worst case runs from 42.9 to 44.1 mm, plus or minus 0.6 mm.</p>
+  </section>
+  <section>
+    <h2>The root sum square truth</h2>
+    <p>Taken as a root sum square, the same tolerances combine to plus or minus 0.37 mm, so the stack is 43.5 mm plus or minus 0.37 mm, against plus or minus 0.6 mm in the worst case.</p>
+  </section>
+  <section>
+    <h2>The gap truth</h2>
+    <p>In a 44 mm pocket, plus or minus 0.2 mm, the worst case gap runs from -0.3 mm to 1.3 mm. A negative figure means the parts overlap in that case.</p>
+  </section>
+  <a class="btn" href="app.html">Stack your parts</a>
+  <footer>Tol Stack is exact arithmetic over the numbers you enter, nothing more.</footer>
+</main>
+</body>
+</html>
